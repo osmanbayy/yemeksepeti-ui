@@ -11,3 +11,52 @@ a {
 li {
   list-style: none;
 }
+
+.input-container {
+  position: relative;
+  /* width: 250px; */
+  margin-bottom: 15px;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 10px;
+  padding-top: 16px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.input-container input:focus {
+  border-color: #3e3e3e;
+}
+
+.input-container input:focus :placeholder-shown {
+  display: none;
+}
+
+.input-container label {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  font-size: 16px;
+  color: #aaa;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.input-container input:focus+label,
+.input-container input:not(:placeholder-shown)+label {
+  top: -8px;
+  left: 10px;
+  font-size: 12px;
+  color: #323232;
+  background: #fff;
+  padding: 0 5px;
+}
+
+.input-container input::placeholder {
+  color: transparent;
+}

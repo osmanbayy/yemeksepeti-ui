@@ -4,10 +4,13 @@ import { FaFacebook } from "react-icons/fa6";
 import { FcGoogle } from "react-icons/fc";
 import "./UserModal.css"
 
-export default function UserModal({ setIsLoginModalOpen }) {
+export default function UserModal({ setIsLoginModalOpen, setIsAuthModalOpen, isAuthModalOpen }) {
   const closeLoginModal = () => {
     setIsLoginModalOpen(false);
   };
+  const handleAuthClick = () => {
+    setIsAuthModalOpen(!isAuthModalOpen)
+  }
   return (
     <div>
       <div className="login-modal-overlay" onClick={closeLoginModal}>
@@ -26,8 +29,8 @@ export default function UserModal({ setIsLoginModalOpen }) {
             <div className="line"></div>
           </div>
           <div className="social-buttons">
-            <button className="login-modal-btn">Giriş Yap</button>
-            <button className="signup-modal-btn">Kayıt Ol</button>
+            <button className="login-modal-btn" onClick={handleAuthClick}>Giriş Yap</button>
+            <button className="signup-modal-btn" onClick={handleAuthClick}>Kayıt Ol</button>
           </div>
           <button className="close-btn" onClick={closeLoginModal}>
             <AiOutlineClose className="icon" />

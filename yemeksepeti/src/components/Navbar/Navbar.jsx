@@ -5,17 +5,15 @@ import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { SiTicktick } from "react-icons/si";
 import { LiaShoppingBagSolid } from "react-icons/lia";
 import { FaRegUser } from "react-icons/fa6";
-import { AiOutlineClose } from "react-icons/ai";
-import { FcGoogle } from "react-icons/fc";
-import { FaFacebook } from "react-icons/fa";
-
 import "./Navbar.css";
 import UserModal from "../UserModal/UserModal";
+import AuthModal from "../AuthModal/AuthModal";
 
 export default function Navbar() {
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
   const [isChoosed, setIsChoosed] = useState("tr");
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
 
   const handleDropdownClick = () => {
     setDropdownIsOpen(!dropdownIsOpen);
@@ -39,7 +37,7 @@ export default function Navbar() {
           </div>
 
           <div>
-            <a className="signup-btn" href="#">
+            <a className="signup-btn" href="#" onClick={handleLoginClick}>
               Kayıt Ol
             </a>
           </div>
@@ -89,7 +87,20 @@ export default function Navbar() {
         </div>
       </header>
 
-      {isLoginModalOpen && <UserModal isLoginModalOpen={isLoginModalOpen} setIsLoginModalOpen={setIsLoginModalOpen} /> }
+      {isLoginModalOpen && (
+        <UserModal
+          setIsLoginModalOpen={setIsLoginModalOpen}
+          setIsAuthModalOpen={setIsAuthModalOpen}
+          isAuthModalOpen={isAuthModalOpen}
+        />
+      )}
+      {isAuthModalOpen && (
+        <AuthModal
+          setisAuthModalOpen={setIsAuthModalOpen}
+          setIsLoginModalOpen={setIsLoginModalOpen}
+          isAuthModalOpen={isAuthModalOpen}
+        />
+      )}
     </section>
   );
 }
