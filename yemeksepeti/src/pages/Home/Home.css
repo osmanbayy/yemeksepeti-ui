@@ -86,6 +86,9 @@
 }
 
 @media screen and (max-width: 992px) {
+    .home-container{
+        height: 300px;
+    }
     .location{
         font-size: small;
     }
@@ -106,7 +109,7 @@
     .input-area{
         z-index: 10;
         position: absolute;
-        top: 25%;
+        bottom: 15%;
         width: 100%;
         background-color: transparent;
         box-shadow: none;
