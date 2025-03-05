@@ -14,8 +14,9 @@ li {
 
 .input-container {
   position: relative;
-  /* width: 250px; */
   margin-bottom: 15px;
+  display: flex;
+  gap: 10px;
 }
 
 .input-container input {
@@ -45,6 +46,7 @@ li {
   color: #aaa;
   pointer-events: none;
   transition: all 0.3s ease;
+  z-index: 10;
 }
 
 .input-container input:focus+label,
