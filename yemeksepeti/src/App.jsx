@@ -4,6 +4,7 @@ import "./App.css";
 import Home from "./pages/Home/Home";
 import Article from "./pages/Article/Article";
 import Cities from "./pages/Cities/Cities";
+import LastPage from "./pages/LastPage/LastPage";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Home />
       <Article />
       <Cities />
+      <LastPage />
     </>
   );
 }
