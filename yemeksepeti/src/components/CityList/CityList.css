@@ -1,0 +1,107 @@
+.cities-list-container {
+    margin: 1rem 7rem;
+}
+.cities-list-container h2 {
+    font-size: 20px;
+    margin-left: 15px;
+}
+.cities-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    padding: 20px;
+    margin: 0 auto;
+    list-style-type: none;
+}
+
+.city-item {
+    position: relative;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    width: var(--city-length);
+}
+
+.city-item::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: var(--city-length);
+    height: 1px;
+    background-color: #000;
+    transition: width 0.5s ease-in-out;
+}
+
+.city-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+}
+
+.city-item[data-length="3"]::before {
+    width: 30px;
+}
+
+.city-item[data-length="4"]::before {
+    width: 40px;
+}
+
+.city-item[data-length="5"]::before {
+    width: 50px;
+}
+
+.city-item[data-length="6"]::before {
+    width: 60px;
+}
+
+.city-item[data-length="7"]::before {
+    width: 70px;
+}
+
+.city-item[data-length="8"]::before {
+    width: 80px;
+}
+
+.city-item[data-length="9"]::before {
+    width: 90px;
+}
+
+.city-item[data-length="10"]::before {
+    width: 100px;
+}
+
+.city-item[data-length="11"]::before {
+    width: 110px;
+}
+
+.city-item[data-length="12"]::before {
+    width: 120px;
+}
+
+.city-item[data-length="13"]::before {
+    width: 130px;
+}
+
+.city-item[data-length="14"]::before {
+    width: 140px;
+}
+
+.city-item:hover::after {
+    width: var(--city-length); /* Data-length değerine göre dinamik genişlik */
+}
+
+@media screen and (max-width: 768px) {
+    .cities-list-container{
+        margin: 0 1rem;
+        margin-top: 8rem;
+    }
+    .cities-list{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

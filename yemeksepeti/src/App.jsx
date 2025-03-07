@@ -5,6 +5,7 @@ import Home from "./pages/Home/Home";
 import Article from "./pages/Article/Article";
 import Cities from "./pages/Cities/Cities";
 import LastPage from "./pages/LastPage/LastPage";
+import CityList from "./components/CityList/CityList";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Article />
       <Cities />
       <LastPage />
+      <CityList />
     </>
   );
 }

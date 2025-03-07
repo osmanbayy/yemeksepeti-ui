@@ -1,5 +1,6 @@
 .last-container {
     margin: 1rem 7rem;
+    margin-bottom: 8rem;
 }
 
 .last-container h2 {
@@ -122,15 +123,16 @@
 @media screen and (max-width: 768px) {
     .last-image{
         top: 65% !important;
-        right: 5%;
+        right: 25%;
     }
+    .apps-image{
+        width: 300px;
+    }
+
 }
 @media screen and (max-width: 500px) {
     .last-image{
         top: 70% !important;
         right: 0;
-    }
-    .apps-image{
-        width: 400px;
     }
 }
