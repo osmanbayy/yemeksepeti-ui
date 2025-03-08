@@ -8,7 +8,7 @@ import { FaGooglePlay } from "react-icons/fa";
 
 export default function LastPage() {
   return (
-    <div className="last-container">
+    <div className="last-container container">
       <h2>Mobil uygulamamızı indirin</h2>
       <div className="last-section">
         <div className="last-infos">
@@ -23,8 +23,8 @@ export default function LastPage() {
               siparişini ver, online ya da kapıda dilediğin gibi öde.
             </p>
           </div>
-          <div className="social-buttons">
-            <div className="social-button">
+          <div className="download-buttons">
+            <div className="download-button">
               <div className="social-icon">
                 <IoLogoApple className="icon" />
               </div>
@@ -33,7 +33,7 @@ export default function LastPage() {
                 <p>App Store</p>
               </div>
             </div>
-            <div className="social-button">
+            <div className="download-button">
               <div className="social-icon">
                 <FaGooglePlay className="icon" />
               </div>
@@ -42,7 +42,7 @@ export default function LastPage() {
                 <p>Google Play</p>
               </div>
             </div>
-            <div className="social-button">
+            <div className="download-button">
               <div className="social-icon">
                 <SiAppgallery style={{ color: "red" }} className="icon" />
               </div>

@@ -1,0 +1,245 @@
+.footer {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: -3rem !important;
+}
+
+.top-footer {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 2rem;
+    width: 100%;
+}
+
+.top-footer img {
+    width: 100px;
+}
+
+.middle-footer {
+    display: flex;
+    gap: 12rem;
+}
+
+.footer-links {
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+    list-style-type: none;
+}
+
+.footer-links-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: end;
+    gap: 10px;
+}
+
+.link-item {
+    position: relative;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    width: var(--link-length);
+}
+
+.link-item::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height: 1px;
+    background-color: #000;
+    transition: width 0.5s ease-in-out;
+}
+
+.link-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+}
+
+.link-item[data-length="3"]::before {
+    width: 30px;
+}
+
+.link-item[data-length="4"]::before {
+    width: 40px;
+}
+
+.link-item[data-length="5"]::before {
+    width: 50px;
+}
+
+.link-item[data-length="6"]::before {
+    width: 50px;
+}
+
+.link-item[data-length="7"]::before {
+    width: 70px;
+}
+
+.link-item[data-length="8"]::before {
+    width: 80px;
+}
+
+.link-item[data-length="9"]::before {
+    width: 90px;
+}
+
+.link-item[data-length="10"]::before {
+    width: 100px;
+}
+
+.link-item[data-length="11"]::before {
+    width: 110px;
+}
+
+.link-item[data-length="12"]::before {
+    width: 120px;
+}
+
+.link-item[data-length="13"]::before {
+    width: 130px;
+}
+
+.link-item[data-length="14"]::before {
+    width: 140px;
+}
+
+.link-item[data-length="15"]::before {
+    width: 150px;
+}
+
+.link-item[data-length="16"]::before {
+    width: 160px;
+}
+
+.link-item[data-length="17"]::before {
+    width: 200px;
+}
+
+.link-item[data-length="27"]::before {
+    width: 200px;
+}
+
+
+
+.link-item:hover::after {
+    width: 200px;
+}
+
+.line {
+    background-color: rgb(185, 185, 185);
+}
+
+.bottom-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+    /* height: 20px; */
+}
+
+.footer-logos{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer-logos div {
+    height: 1px;
+    background-color: #686868;
+    width: 40px;
+    transform: rotate(90deg);
+}
+
+.yemeksepeti-image{
+    width: 120px;
+    height: 20px;
+    margin-right: -20px;
+    /* height: 150px; */
+}
+.delivery-image {
+    width: 150px;
+    margin-left: -40px;
+}
+.share-buttons{
+    display: flex;
+    gap: 1rem;
+}
+.icon-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgb(200, 200, 200);
+    color: #000;
+}
+.icon-button:hover {
+    transform: scale(1.05);
+}
+@media screen and (max-width: 768px) {
+    .top-footer {
+        justify-content: center;
+    }
+
+    .middle-footer {
+        gap: 3rem;
+    }
+
+    .footer-links-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .link-item {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer-links-list {
+        grid-template-columns: max-content;
+        /* text-align: center; */
+    }
+
+    .middle-footer {
+        flex-direction: column-reverse;
+    }
+
+    .footer-copyright {
+        text-align: center;
+    }
+
+    .middle-footer {
+        gap: 0;
+    }
+    .bottom-footer{
+        flex-direction: column;
+        margin-bottom: 5rem;
+    }
+    .yemeksepeti-image{
+        margin-right: 0;
+    }
+    .delivery-image{
+        margin-left: 0;
+    }
+    .footer-logos div {
+       display: none;
+    }
+    .footer-logos{
+        flex-direction: column;
+        gap: 0;
+    }
+}

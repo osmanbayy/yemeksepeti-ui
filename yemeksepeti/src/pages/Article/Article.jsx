@@ -9,7 +9,7 @@ export default function Article() {
         <h2>Restoran veya Mahalle esnafı iş ortağımız olun</h2>
         <div className="relative-image">
           <img src={articleImage} alt="" className="article-img" />
-          <div className="article-absolute">
+          <div className="article-absolute container">
             <h3>
               Hemen katılın, Yemeksepeti ile satışlarınızı katlamaya başlayın
             </h3>

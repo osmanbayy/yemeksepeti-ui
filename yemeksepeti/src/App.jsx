@@ -6,6 +6,8 @@ import Article from "./pages/Article/Article";
 import Cities from "./pages/Cities/Cities";
 import LastPage from "./pages/LastPage/LastPage";
 import CityList from "./components/CityList/CityList";
+import HomeArticle from "./components/HomeArticle/HomeArticle";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -15,7 +17,9 @@ function App() {
       <Article />
       <Cities />
       <LastPage />
+      <HomeArticle />
       <CityList />
+      <Footer />
     </>
   );
 }

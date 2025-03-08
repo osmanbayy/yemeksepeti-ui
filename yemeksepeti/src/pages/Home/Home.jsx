@@ -7,7 +7,7 @@ export default function Home() {
   const [inputValue, setInputValue] = useState("");
   return (
     <div className="home-container">
-      <div className="home-picture-div">
+      <div className="home-picture-div container">
         <img src={homePicture} alt="" className="home-image" />
       </div>
       <div className="home-info">

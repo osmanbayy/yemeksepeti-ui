@@ -95,7 +95,9 @@
 .city-item:hover::after {
     width: var(--city-length); /* Data-length değerine göre dinamik genişlik */
 }
-
+.line {
+    background-color: rgb(185, 185, 185);
+}
 @media screen and (max-width: 768px) {
     .cities-list-container{
         margin: 0 1rem;

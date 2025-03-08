@@ -1,9 +1,7 @@
 .cities-container {
-    padding: 1rem 6rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-left: 1%;
     overflow: hidden; 
 }
 

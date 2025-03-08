@@ -1,0 +1,19 @@
+.home-article {
+    padding: 4rem;
+}
+.home-article p {
+    font-weight: 300;
+}
+.home-article h2 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.home-article-list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+.home-article-list span {
+    font-weight: 300;
+}
